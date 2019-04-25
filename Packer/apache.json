@@ -1,0 +1,36 @@
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "ap-southeast-1",
+    "source_ami_filter": {
+      "filters": {
+        "virtualization-type": "hvm",
+        "name": "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20190320*",
+        "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "Apache server",
+    "tags": {
+    "Name": "UBUNTU Server",
+    "author": "docinfosci",
+    "build-timestamp": "{{timestamp}}",
+    "build-tool": "packer",
+    "os": "ubuntu",
+    "os-version": "16.04",
+    "ssh-user": "ubuntu"
+    }
+  }],
+
+"provisioners": [
+
+       {
+          "type": "shell",
+          "script": "apache.sh"
+       }
+
+  ]
+}

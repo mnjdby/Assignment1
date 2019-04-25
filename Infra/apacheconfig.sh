@@ -33,13 +33,17 @@ ServerAdmin webmaster@localhost
 sudo chmod 644 /data/var/www/html/index.html
 sudo echo "<html>
     <head>
-        <title>Example</title>
+        <title>Linux Server</title>
     </head>
     <body>
-        <img src="https://s3.amazonaws.com/shreebucket88/proxy_error.PNG" />
-        <img src="https://s3.amazonaws.com/shreebucket88/proxy_error.PNG" />
-        <img src="https://s3.amazonaws.com/shreebucket88/proxy_error.PNG" />
-        <img src="https://s3.amazonaws.com/shreebucket88/proxy_error.PNG" />
+        <h1> Hello AWS World - running on Linux - on port 80 </h1>
+        <img src= "https://s3-ap-southeast-1.amazonaws.com/testwebserverscreenshots/linux/screen-shot1.JPG" \n /> <br /><br /><br />
+        <img src= "https://s3-ap-southeast-1.amazonaws.com/testwebserverscreenshots/linux/screen-shot2.JPG" \n /> <br /><br /><br />
+        <img src= "https://s3-ap-southeast-1.amazonaws.com/testwebserverscreenshots/linux/screen-shot3.JPG" /> <br /><br /><br /><br /><br /><br />
+
+        <h2> This Infrastructure is created by Terraform and all code is available in public repo for reference - "https://github.com/mnjdby/Assignment1" </h2> <br /><br /><br />
+
+
     </body>
 </html>" > /data/var/www/html/index.html
 sudo systemctl restart apache2
